@@ -18,7 +18,7 @@ class Assignment(models.Model):
     position = models.IntegerField()
     employee = models.ForeignKey(Employee)
     goal = models.ForeignKey(Goal)
-    weight = models.DecimalField(max_digits=5, decimal_places=2)
+    weight = models.DecimalField(decimal_places=2, max_digits=5)
     
 
 class AcceptanceCriteria(models.Model):
@@ -33,7 +33,7 @@ class AcceptanceCriteria(models.Model):
                                 choices=STANDARD_CLASSIFICATION)
     description = models.CharField(max_length=50)
     expected_date = models.DateField()
-    expected_percentage = models.IntegerField(max_digits=5, decimal_places=2)
+    expected_percentage = models.IntegerField()
     
 class Deliverable(models.Model):
     position = models.IntegerField()
