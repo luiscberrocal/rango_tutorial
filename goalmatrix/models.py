@@ -29,6 +29,10 @@ class Employee(models.Model):
 class Goal(models.Model):
     position = models.IntegerField()
     description = models.CharField(max_length=120)
+    
+    def has_all_acceptance_criteria(self):
+        return self.acceptancecriteria_set.count() == 4
+    
     class Meta:
         ordering = ['position']
     

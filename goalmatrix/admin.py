@@ -15,6 +15,7 @@ class EmployeeAdmin(admin.ModelAdmin):
     inlines = [AssignmentInLine]
     
 class GoalAdmin(admin.ModelAdmin):
+    list_display = ['position', 'description', 'has_all_acceptance_criteria']
     inlines = [AcceptanceCriteriaInLine]
     
 admin.site.register(Employee, EmployeeAdmin)
