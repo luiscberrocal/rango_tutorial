@@ -6,8 +6,8 @@
 	<h1>{{ employee }}</h1>
 	<h2>{{ employee.company_id }}</h2>
 	<ul>
-	{% for assignment in assignments %}
-		<li>{{ assignment}}</li>
+	{% for assignment in employee.assignment_set.all %}
+		<li>{{ assignment.goal.description}}</li>
 	{% endfor %}
 	</ul>
 {% endblock %}

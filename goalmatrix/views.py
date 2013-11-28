@@ -8,11 +8,10 @@ from django.template.context import RequestContext
 def showassignments(request, company_id):
     employee = Employee.objects.get(company_id=company_id)
     #print "******************     %s        ***************************" % (employee.id)
-    #ddd = employee.assignment_set.all()
-    ddd = Assignment.objects.filter(employee__id=employee.id)
+   
     context = RequestContext(request)
     
-    context_dict = {'employee': employee, 'assignments' : ddd}
+    context_dict = {'employee': employee}
     
 
     # Return a rendered response to send to the client.
