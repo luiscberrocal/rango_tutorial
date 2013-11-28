@@ -29,6 +29,8 @@ class Employee(models.Model):
 class Goal(models.Model):
     position = models.IntegerField()
     description = models.CharField(max_length=120)
+    class Meta:
+        ordering = ['position']
     
     def __unicode__(self):
         return u"%d, %s" % (self.position, self.description)
@@ -39,7 +41,8 @@ class Assignment(models.Model):
     employee = models.ForeignKey(Employee)
     goal = models.ForeignKey(Goal)
     weight = models.DecimalField(decimal_places=2, max_digits=5)
-    
+    class Meta:
+        ordering = ['position']
 
 class AcceptanceCriteria(models.Model):
     goal = models.ForeignKey(Goal)
@@ -49,14 +52,23 @@ class AcceptanceCriteria(models.Model):
                       ('S', 'Standard'),
                       ('NS', 'Needs Improvement'),
                       )
+    DATE_DEFINITION_CHOICES =(('BEFORE', 'Before'), ('AFTER', 'After'), ('NA', 'Not Applicable'))
     standard = models.CharField(max_length=2,
                                 choices=STANDARD_CLASSIFICATION)
     description = models.CharField(max_length=120, blank=True, null=True)
+    date_definition = models.CharField(max_length=8, 
+                                       choices = DATE_DEFINITION_CHOICES,
+                                       default= DATE_DEFINITION_CHOICES[0][0])
     expected_date = models.DateField()
-    expected_percentage = models.IntegerField()
+    expected_percentage = models.IntegerField(default=100)
     
     def __unicode__(self):
-        return u"%s para %s terminar el %d antes del  %s" % (self.goal, self.standard, self.expected_percentage, self.expected_date)
+        if self.date_definition == 'BEFORE':
+            return u"%s para %s terminar el %d antes del  %s" % (self.goal, self.standard, self.expected_percentage, self.expected_date)
+        elif self.date_definition == 'AFTER':
+            return u"%s para %s terminar el %d despues del  %s" % (self.goal, self.standard, self.expected_percentage, self.expected_date)
+        else:
+            return u"%s para %s avance %d fecha  %s" % (self.goal, self.standard, self.expected_percentage, self.expected_date)
     
 class Deliverable(models.Model):
     position = models.IntegerField()
