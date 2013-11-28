@@ -2,6 +2,13 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import RegexValidator
 
+class Team(models.Model):
+    name = models.CharField(max_length=50)
+    short_name = models.CharField(max_length=10)
+    
+    def __unicode__(self):
+        return u"%s, %s" % (self.short_name, self.name,)
+
 class Employee(models.Model):
     first_name = models.CharField(max_length=30)
     middle_name = models.CharField(max_length=30, blank=True, null=True)
@@ -14,6 +21,7 @@ class Employee(models.Model):
 	            code='invalid_company_id'
 	        ),
 	    ])
+    team = models.ForeignKey(Team, null=True, blank=True)
     
     def __unicode__(self):
         return u"%s, %s" % (self.last_name, self.first_name,)
