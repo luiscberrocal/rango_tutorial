@@ -1,11 +1,19 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.validators import RegexValidator
 
 class Employee(models.Model):
     first_name = models.CharField(max_length=30)
-    middle_name = models.CharField(max_length=30)
+    middle_name = models.CharField(max_length=30, blank=True, null=True)
     last_name = models.CharField(max_length=30)
-    company_id = models.CharField(max_length=8)
+    company_id = models.CharField(max_length=8,
+	    validators=[
+	        RegexValidator(
+	            regex='^\d{7}$',
+	            message='company id must be 7 digits',
+	            code='invalid_company_id'
+	        ),
+	    ])
     
     def __unicode__(self):
         return u"%s, %s" % (self.last_name, self.first_name,)
@@ -35,7 +43,7 @@ class AcceptanceCriteria(models.Model):
                       )
     standard = models.CharField(max_length=2,
                                 choices=STANDARD_CLASSIFICATION)
-    description = models.CharField(max_length=120)
+    description = models.CharField(max_length=120, blank=True, null=True)
     expected_date = models.DateField()
     expected_percentage = models.IntegerField()
     
