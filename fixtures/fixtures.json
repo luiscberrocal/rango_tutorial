@@ -1,0 +1,937 @@
+[
+{
+ "pk": 1, 
+ "model": "contenttypes.contenttype", 
+ "fields": {
+  "model": "permission", 
+  "name": "permission", 
+  "app_label": "auth"
+ }
+},
+{
+ "pk": 2, 
+ "model": "contenttypes.contenttype", 
+ "fields": {
+  "model": "group", 
+  "name": "group", 
+  "app_label": "auth"
+ }
+},
+{
+ "pk": 3, 
+ "model": "contenttypes.contenttype", 
+ "fields": {
+  "model": "user", 
+  "name": "user", 
+  "app_label": "auth"
+ }
+},
+{
+ "pk": 4, 
+ "model": "contenttypes.contenttype", 
+ "fields": {
+  "model": "contenttype", 
+  "name": "content type", 
+  "app_label": "contenttypes"
+ }
+},
+{
+ "pk": 5, 
+ "model": "contenttypes.contenttype", 
+ "fields": {
+  "model": "session", 
+  "name": "session", 
+  "app_label": "sessions"
+ }
+},
+{
+ "pk": 6, 
+ "model": "contenttypes.contenttype", 
+ "fields": {
+  "model": "site", 
+  "name": "site", 
+  "app_label": "sites"
+ }
+},
+{
+ "pk": 7, 
+ "model": "contenttypes.contenttype", 
+ "fields": {
+  "model": "category", 
+  "name": "category", 
+  "app_label": "rango"
+ }
+},
+{
+ "pk": 8, 
+ "model": "contenttypes.contenttype", 
+ "fields": {
+  "model": "page", 
+  "name": "page", 
+  "app_label": "rango"
+ }
+},
+{
+ "pk": 9, 
+ "model": "contenttypes.contenttype", 
+ "fields": {
+  "model": "logentry", 
+  "name": "log entry", 
+  "app_label": "admin"
+ }
+},
+{
+ "pk": 10, 
+ "model": "contenttypes.contenttype", 
+ "fields": {
+  "model": "employee", 
+  "name": "employee", 
+  "app_label": "goalmatrix"
+ }
+},
+{
+ "pk": 11, 
+ "model": "contenttypes.contenttype", 
+ "fields": {
+  "model": "goal", 
+  "name": "goal", 
+  "app_label": "goalmatrix"
+ }
+},
+{
+ "pk": 12, 
+ "model": "contenttypes.contenttype", 
+ "fields": {
+  "model": "assignment", 
+  "name": "assignment", 
+  "app_label": "goalmatrix"
+ }
+},
+{
+ "pk": 13, 
+ "model": "contenttypes.contenttype", 
+ "fields": {
+  "model": "acceptancecriteria", 
+  "name": "acceptance criteria", 
+  "app_label": "goalmatrix"
+ }
+},
+{
+ "pk": 14, 
+ "model": "contenttypes.contenttype", 
+ "fields": {
+  "model": "deliverable", 
+  "name": "deliverable", 
+  "app_label": "goalmatrix"
+ }
+},
+{
+ "pk": "6y0bul21mw9nwz9sep3s699sfc1h7x77", 
+ "model": "sessions.session", 
+ "fields": {
+  "expire_date": "2013-12-11T12:18:54.491Z", 
+  "session_data": "ZGFkYTUzMTA5Y2Y3YjJlN2FhZWIxNWU0ZjdhZTNhY2ExOGUyNzhiNTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6MX0="
+ }
+},
+{
+ "pk": "go96ml9p1v6r2j7wvodnedd5cgvva2rw", 
+ "model": "sessions.session", 
+ "fields": {
+  "expire_date": "2013-12-11T03:50:03.943Z", 
+  "session_data": "ZGFkYTUzMTA5Y2Y3YjJlN2FhZWIxNWU0ZjdhZTNhY2ExOGUyNzhiNTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6MX0="
+ }
+},
+{
+ "pk": 1, 
+ "model": "sites.site", 
+ "fields": {
+  "domain": "example.com", 
+  "name": "example.com"
+ }
+},
+{
+ "pk": 1, 
+ "model": "rango.category", 
+ "fields": {
+  "likes": 0, 
+  "name": "Django", 
+  "views": 0
+ }
+},
+{
+ "pk": 2, 
+ "model": "rango.category", 
+ "fields": {
+  "likes": 0, 
+  "name": "IT", 
+  "views": 0
+ }
+},
+{
+ "pk": 1, 
+ "model": "goalmatrix.employee", 
+ "fields": {
+  "first_name": "Joe", 
+  "last_name": "Dominguez", 
+  "middle_name": "S", 
+  "company_id": "7598654"
+ }
+},
+{
+ "pk": 2, 
+ "model": "goalmatrix.employee", 
+ "fields": {
+  "first_name": "George", 
+  "last_name": "Days", 
+  "middle_name": "A.", 
+  "company_id": "78954875"
+ }
+},
+{
+ "pk": 3, 
+ "model": "goalmatrix.employee", 
+ "fields": {
+  "first_name": "Jules", 
+  "last_name": "Daniels", 
+  "middle_name": "", 
+  "company_id": "1721344"
+ }
+},
+{
+ "pk": 4, 
+ "model": "goalmatrix.employee", 
+ "fields": {
+  "first_name": "Carmen", 
+  "last_name": "Martinez", 
+  "middle_name": "", 
+  "company_id": "1786356"
+ }
+},
+{
+ "pk": 1, 
+ "model": "goalmatrix.goal", 
+ "fields": {
+  "position": 1, 
+  "description": "CA-Activaci\u00f3n de nuevas esclusas"
+ }
+},
+{
+ "pk": 2, 
+ "model": "goalmatrix.goal", 
+ "fields": {
+  "position": 2, 
+  "description": "CA-Activaci\u00f3n de nuevas esclusas"
+ }
+},
+{
+ "pk": 3, 
+ "model": "goalmatrix.goal", 
+ "fields": {
+  "position": 3, 
+  "description": "Implementaci\u00f3n de la Calculadora de Tiempos en el Horario de Tr\u00e1nsito"
+ }
+},
+{
+ "pk": 4, 
+ "model": "goalmatrix.goal", 
+ "fields": {
+  "position": 4, 
+  "description": "Implementaci\u00f3n de la Calculadora de Tiempos en el Horario de Tr\u00e1nsito"
+ }
+},
+{
+ "pk": 5, 
+ "model": "goalmatrix.goal", 
+ "fields": {
+  "position": 5, 
+  "description": "Vessel Schedule Reprogramaci\u00f3n"
+ }
+},
+{
+ "pk": 6, 
+ "model": "goalmatrix.goal", 
+ "fields": {
+  "position": 6, 
+  "description": "MDCA"
+ }
+},
+{
+ "pk": 7, 
+ "model": "goalmatrix.goal", 
+ "fields": {
+  "position": 7, 
+  "description": "Adecuaciones para Remolcadores"
+ }
+},
+{
+ "pk": 8, 
+ "model": "goalmatrix.goal", 
+ "fields": {
+  "position": 8, 
+  "description": "Adecuaciones a Pilot Unit"
+ }
+},
+{
+ "pk": 9, 
+ "model": "goalmatrix.goal", 
+ "fields": {
+  "position": 9, 
+  "description": "Adecuacionesa a Arqueo"
+ }
+},
+{
+ "pk": 1, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "add_permission", 
+  "name": "Can add permission", 
+  "content_type": 1
+ }
+},
+{
+ "pk": 2, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "change_permission", 
+  "name": "Can change permission", 
+  "content_type": 1
+ }
+},
+{
+ "pk": 3, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "delete_permission", 
+  "name": "Can delete permission", 
+  "content_type": 1
+ }
+},
+{
+ "pk": 4, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "add_group", 
+  "name": "Can add group", 
+  "content_type": 2
+ }
+},
+{
+ "pk": 5, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "change_group", 
+  "name": "Can change group", 
+  "content_type": 2
+ }
+},
+{
+ "pk": 6, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "delete_group", 
+  "name": "Can delete group", 
+  "content_type": 2
+ }
+},
+{
+ "pk": 7, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "add_user", 
+  "name": "Can add user", 
+  "content_type": 3
+ }
+},
+{
+ "pk": 8, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "change_user", 
+  "name": "Can change user", 
+  "content_type": 3
+ }
+},
+{
+ "pk": 9, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "delete_user", 
+  "name": "Can delete user", 
+  "content_type": 3
+ }
+},
+{
+ "pk": 10, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "add_contenttype", 
+  "name": "Can add content type", 
+  "content_type": 4
+ }
+},
+{
+ "pk": 11, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "change_contenttype", 
+  "name": "Can change content type", 
+  "content_type": 4
+ }
+},
+{
+ "pk": 12, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "delete_contenttype", 
+  "name": "Can delete content type", 
+  "content_type": 4
+ }
+},
+{
+ "pk": 13, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "add_session", 
+  "name": "Can add session", 
+  "content_type": 5
+ }
+},
+{
+ "pk": 14, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "change_session", 
+  "name": "Can change session", 
+  "content_type": 5
+ }
+},
+{
+ "pk": 15, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "delete_session", 
+  "name": "Can delete session", 
+  "content_type": 5
+ }
+},
+{
+ "pk": 16, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "add_site", 
+  "name": "Can add site", 
+  "content_type": 6
+ }
+},
+{
+ "pk": 17, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "change_site", 
+  "name": "Can change site", 
+  "content_type": 6
+ }
+},
+{
+ "pk": 18, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "delete_site", 
+  "name": "Can delete site", 
+  "content_type": 6
+ }
+},
+{
+ "pk": 19, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "add_category", 
+  "name": "Can add category", 
+  "content_type": 7
+ }
+},
+{
+ "pk": 20, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "change_category", 
+  "name": "Can change category", 
+  "content_type": 7
+ }
+},
+{
+ "pk": 21, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "delete_category", 
+  "name": "Can delete category", 
+  "content_type": 7
+ }
+},
+{
+ "pk": 22, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "add_page", 
+  "name": "Can add page", 
+  "content_type": 8
+ }
+},
+{
+ "pk": 23, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "change_page", 
+  "name": "Can change page", 
+  "content_type": 8
+ }
+},
+{
+ "pk": 24, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "delete_page", 
+  "name": "Can delete page", 
+  "content_type": 8
+ }
+},
+{
+ "pk": 25, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "add_logentry", 
+  "name": "Can add log entry", 
+  "content_type": 9
+ }
+},
+{
+ "pk": 26, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "change_logentry", 
+  "name": "Can change log entry", 
+  "content_type": 9
+ }
+},
+{
+ "pk": 27, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "delete_logentry", 
+  "name": "Can delete log entry", 
+  "content_type": 9
+ }
+},
+{
+ "pk": 28, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "add_employee", 
+  "name": "Can add employee", 
+  "content_type": 10
+ }
+},
+{
+ "pk": 29, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "change_employee", 
+  "name": "Can change employee", 
+  "content_type": 10
+ }
+},
+{
+ "pk": 30, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "delete_employee", 
+  "name": "Can delete employee", 
+  "content_type": 10
+ }
+},
+{
+ "pk": 31, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "add_goal", 
+  "name": "Can add goal", 
+  "content_type": 11
+ }
+},
+{
+ "pk": 32, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "change_goal", 
+  "name": "Can change goal", 
+  "content_type": 11
+ }
+},
+{
+ "pk": 33, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "delete_goal", 
+  "name": "Can delete goal", 
+  "content_type": 11
+ }
+},
+{
+ "pk": 34, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "add_assignment", 
+  "name": "Can add assignment", 
+  "content_type": 12
+ }
+},
+{
+ "pk": 35, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "change_assignment", 
+  "name": "Can change assignment", 
+  "content_type": 12
+ }
+},
+{
+ "pk": 36, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "delete_assignment", 
+  "name": "Can delete assignment", 
+  "content_type": 12
+ }
+},
+{
+ "pk": 37, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "add_acceptancecriteria", 
+  "name": "Can add acceptance criteria", 
+  "content_type": 13
+ }
+},
+{
+ "pk": 38, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "change_acceptancecriteria", 
+  "name": "Can change acceptance criteria", 
+  "content_type": 13
+ }
+},
+{
+ "pk": 39, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "delete_acceptancecriteria", 
+  "name": "Can delete acceptance criteria", 
+  "content_type": 13
+ }
+},
+{
+ "pk": 40, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "add_deliverable", 
+  "name": "Can add deliverable", 
+  "content_type": 14
+ }
+},
+{
+ "pk": 41, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "change_deliverable", 
+  "name": "Can change deliverable", 
+  "content_type": 14
+ }
+},
+{
+ "pk": 42, 
+ "model": "auth.permission", 
+ "fields": {
+  "codename": "delete_deliverable", 
+  "name": "Can delete deliverable", 
+  "content_type": 14
+ }
+},
+{
+ "pk": 1, 
+ "model": "auth.user", 
+ "fields": {
+  "username": "luiscberrocal", 
+  "first_name": "", 
+  "last_name": "", 
+  "is_active": true, 
+  "is_superuser": true, 
+  "is_staff": true, 
+  "last_login": "2013-11-27T12:18:54.371Z", 
+  "groups": [], 
+  "user_permissions": [], 
+  "password": "pbkdf2_sha256$12000$jcwyZoxlumDT$hQaEuA8t68qk2APOkmEMlwK7VFELr8AgoyYU5bRTY/c=", 
+  "email": "luis.berrocal.1942@gmail.com", 
+  "date_joined": "2013-11-27T03:46:53.084Z"
+ }
+},
+{
+ "pk": 1, 
+ "model": "rango.page", 
+ "fields": {
+  "category": 1, 
+  "title": "Tango with Django", 
+  "url": "http://kilo.com/", 
+  "views": 0, 
+  "created": "2013-11-27T03:59:23.859Z", 
+  "creator": 1
+ }
+},
+{
+ "pk": 1, 
+ "model": "admin.logentry", 
+ "fields": {
+  "action_flag": 1, 
+  "action_time": "2013-11-27T03:58:35.019Z", 
+  "object_repr": "Django", 
+  "object_id": "1", 
+  "change_message": "", 
+  "user": 1, 
+  "content_type": 7
+ }
+},
+{
+ "pk": 2, 
+ "model": "admin.logentry", 
+ "fields": {
+  "action_flag": 1, 
+  "action_time": "2013-11-27T03:58:45.205Z", 
+  "object_repr": "IT", 
+  "object_id": "2", 
+  "change_message": "", 
+  "user": 1, 
+  "content_type": 7
+ }
+},
+{
+ "pk": 3, 
+ "model": "admin.logentry", 
+ "fields": {
+  "action_flag": 1, 
+  "action_time": "2013-11-27T03:59:23.867Z", 
+  "object_repr": "Tango with Django", 
+  "object_id": "1", 
+  "change_message": "", 
+  "user": 1, 
+  "content_type": 8
+ }
+},
+{
+ "pk": 4, 
+ "model": "admin.logentry", 
+ "fields": {
+  "action_flag": 1, 
+  "action_time": "2013-11-27T12:19:33.881Z", 
+  "object_repr": "Dominguez, Joe", 
+  "object_id": "1", 
+  "change_message": "", 
+  "user": 1, 
+  "content_type": 10
+ }
+},
+{
+ "pk": 5, 
+ "model": "admin.logentry", 
+ "fields": {
+  "action_flag": 1, 
+  "action_time": "2013-11-27T12:19:52.701Z", 
+  "object_repr": "Days, George", 
+  "object_id": "2", 
+  "change_message": "", 
+  "user": 1, 
+  "content_type": 10
+ }
+},
+{
+ "pk": 6, 
+ "model": "admin.logentry", 
+ "fields": {
+  "action_flag": 1, 
+  "action_time": "2013-11-28T01:39:18.860Z", 
+  "object_repr": "Daniels, Jules", 
+  "object_id": "3", 
+  "change_message": "", 
+  "user": 1, 
+  "content_type": 10
+ }
+},
+{
+ "pk": 7, 
+ "model": "admin.logentry", 
+ "fields": {
+  "action_flag": 1, 
+  "action_time": "2013-11-28T01:59:51.302Z", 
+  "object_repr": "Martinez, Carmen", 
+  "object_id": "4", 
+  "change_message": "", 
+  "user": 1, 
+  "content_type": 10
+ }
+},
+{
+ "pk": 8, 
+ "model": "admin.logentry", 
+ "fields": {
+  "action_flag": 2, 
+  "action_time": "2013-11-28T02:06:00.835Z", 
+  "object_repr": "Daniels, Jules", 
+  "object_id": "3", 
+  "change_message": "Changed company_id.", 
+  "user": 1, 
+  "content_type": 10
+ }
+},
+{
+ "pk": 9, 
+ "model": "admin.logentry", 
+ "fields": {
+  "action_flag": 2, 
+  "action_time": "2013-11-28T02:06:56.878Z", 
+  "object_repr": "Martinez, Carmen", 
+  "object_id": "4", 
+  "change_message": "Changed company_id.", 
+  "user": 1, 
+  "content_type": 10
+ }
+},
+{
+ "pk": 10, 
+ "model": "admin.logentry", 
+ "fields": {
+  "action_flag": 2, 
+  "action_time": "2013-11-28T11:51:21.648Z", 
+  "object_repr": "Martinez, Carmen", 
+  "object_id": "4", 
+  "change_message": "Changed company_id.", 
+  "user": 1, 
+  "content_type": 10
+ }
+},
+{
+ "pk": 11, 
+ "model": "admin.logentry", 
+ "fields": {
+  "action_flag": 1, 
+  "action_time": "2013-11-28T12:00:14.814Z", 
+  "object_repr": "1, CA-Activaci\u00f3n de nuevas esclusas", 
+  "object_id": "1", 
+  "change_message": "", 
+  "user": 1, 
+  "content_type": 11
+ }
+},
+{
+ "pk": 12, 
+ "model": "admin.logentry", 
+ "fields": {
+  "action_flag": 1, 
+  "action_time": "2013-11-28T12:00:36.544Z", 
+  "object_repr": "2, CA-Activaci\u00f3n de nuevas esclusas", 
+  "object_id": "2", 
+  "change_message": "", 
+  "user": 1, 
+  "content_type": 11
+ }
+},
+{
+ "pk": 13, 
+ "model": "admin.logentry", 
+ "fields": {
+  "action_flag": 1, 
+  "action_time": "2013-11-28T12:00:52.124Z", 
+  "object_repr": "3, Implementaci\u00f3n de la Calculadora de Tiempos en el Horario de Tr\u00e1nsito", 
+  "object_id": "3", 
+  "change_message": "", 
+  "user": 1, 
+  "content_type": 11
+ }
+},
+{
+ "pk": 14, 
+ "model": "admin.logentry", 
+ "fields": {
+  "action_flag": 1, 
+  "action_time": "2013-11-28T12:01:12.894Z", 
+  "object_repr": "4, Implementaci\u00f3n de la Calculadora de Tiempos en el Horario de Tr\u00e1nsito", 
+  "object_id": "4", 
+  "change_message": "", 
+  "user": 1, 
+  "content_type": 11
+ }
+},
+{
+ "pk": 15, 
+ "model": "admin.logentry", 
+ "fields": {
+  "action_flag": 1, 
+  "action_time": "2013-11-28T12:01:31.404Z", 
+  "object_repr": "5, Vessel Schedule Reprogramaci\u00f3n", 
+  "object_id": "5", 
+  "change_message": "", 
+  "user": 1, 
+  "content_type": 11
+ }
+},
+{
+ "pk": 16, 
+ "model": "admin.logentry", 
+ "fields": {
+  "action_flag": 1, 
+  "action_time": "2013-11-28T12:01:41.434Z", 
+  "object_repr": "6, MDCA", 
+  "object_id": "6", 
+  "change_message": "", 
+  "user": 1, 
+  "content_type": 11
+ }
+},
+{
+ "pk": 17, 
+ "model": "admin.logentry", 
+ "fields": {
+  "action_flag": 1, 
+  "action_time": "2013-11-28T12:01:59.315Z", 
+  "object_repr": "7, Adecuaciones para Remolcadores", 
+  "object_id": "7", 
+  "change_message": "", 
+  "user": 1, 
+  "content_type": 11
+ }
+},
+{
+ "pk": 18, 
+ "model": "admin.logentry", 
+ "fields": {
+  "action_flag": 1, 
+  "action_time": "2013-11-28T12:02:46.325Z", 
+  "object_repr": "8, Adecuaciones a Pilot Unit", 
+  "object_id": "8", 
+  "change_message": "", 
+  "user": 1, 
+  "content_type": 11
+ }
+},
+{
+ "pk": 19, 
+ "model": "admin.logentry", 
+ "fields": {
+  "action_flag": 1, 
+  "action_time": "2013-11-28T12:03:05.535Z", 
+  "object_repr": "9, Adecuacionesa a Arqueo", 
+  "object_id": "9", 
+  "change_message": "", 
+  "user": 1, 
+  "content_type": 11
+ }
+}
+]

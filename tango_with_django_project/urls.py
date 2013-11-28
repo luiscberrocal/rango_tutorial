@@ -17,6 +17,7 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 	url(r'^rango/', include('rango.urls')),
+    url(r'^goalmatrix/', include('goalmatrix.urls')),
 )
 # At the top of your urls.py file, add the following line:
 from django.conf import settings
