@@ -10,21 +10,21 @@ class Team(models.Model):
         return u"%s, %s" % (self.short_name, self.name,)
 
 class Employee(models.Model):
-	first_name = models.CharField(max_length=30)
-	middle_name = models.CharField(max_length=30, blank=True, null=True)
-	last_name = models.CharField(max_length=30)
-	company_id = models.CharField(max_length=8, validators=[RegexValidator(regex='^\d{7}$', message='company id must be 7 digits', code='invalid_company_id'),])
-	team = models.ForeignKey(Team, null=True, blank=True)
-	
-	def total_assignment(self):
-		ta = 0
-		for assign in self.assignment_set.all:
-			ta = assign.weight
-		#print "ddddddddddddddddd %d" % (ta)
-		return ta
-		
-	def __unicode__(self):
-		return u"%s, %s" % (self.last_name, self.first_name,)
+    first_name = models.CharField(max_length=30)
+    middle_name = models.CharField(max_length=30, blank=True, null=True)
+    last_name = models.CharField(max_length=30)
+    company_id = models.CharField(max_length=8, validators=[RegexValidator(regex='^\d{7}$', message='company id must be 7 digits', code='invalid_company_id'),])
+    team = models.ForeignKey(Team, null=True, blank=True)
+    
+    def total_assignment(self):
+        ta = 0
+        for assign in self.assignment_set.all():
+            ta += assign.weight
+            #print "ddddddddddddddddd %d" % (ta)
+        return ta
+
+    def __unicode__(self):
+        return u"%s, %s" % (self.last_name, self.first_name,)
 
 class Goal(models.Model):
     position = models.IntegerField()
@@ -53,8 +53,8 @@ class AcceptanceCriteria(models.Model):
     STANDARD_CLASSIFICATION = (
                       ('O', 'Outstanding'),
                       ('E', 'Superior'),
-                      ('S', 'Standard'),
-                      ('NS', 'Needs Improvement'),
+                      ('S', 'Satisfactory'),
+                      ('N', 'Needs Improvement'),
                       )
     DATE_DEFINITION_CHOICES =(('BEFORE', 'Before'), ('AFTER', 'After'), ('NA', 'Not Applicable'))
     standard = models.CharField(max_length=2,
