@@ -47,18 +47,29 @@ class Assignment(models.Model):
     weight = models.DecimalField(decimal_places=2, max_digits=5)
     class Meta:
         ordering = ['position']
-
-class AcceptanceCriteria(models.Model):
-    goal = models.ForeignKey(Goal)
+        
+class StandardClassification(models.Model):
+    class Meta:
+        ordering = ['-grade']
     STANDARD_CLASSIFICATION = (
                       ('O', 'Outstanding'),
                       ('E', 'Superior'),
                       ('S', 'Satisfactory'),
                       ('N', 'Needs Improvement'),
                       )
+    letter = models.CharField(max_length=1,
+                              choices=STANDARD_CLASSIFICATION,
+                              primary_key=True)
+    grade = models.DecimalField(decimal_places=2, max_digits=5)
+    
+    def __unicode__(self):
+        return u'%s %d' % (self.letter, self.grade)
+    
+class AcceptanceCriteria(models.Model):
+    goal = models.ForeignKey(Goal)
+    
     DATE_DEFINITION_CHOICES =(('BEFORE', 'Before'), ('AFTER', 'After'), ('NA', 'Not Applicable'))
-    standard = models.CharField(max_length=2,
-                                choices=STANDARD_CLASSIFICATION)
+    standard = models.ForeignKey(StandardClassification)
     description = models.CharField(max_length=120, blank=True, null=True)
     date_definition = models.CharField(max_length=8, 
                                        choices = DATE_DEFINITION_CHOICES,
