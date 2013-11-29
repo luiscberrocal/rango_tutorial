@@ -13,7 +13,12 @@ class Employee(models.Model):
     first_name = models.CharField(max_length=30)
     middle_name = models.CharField(max_length=30, blank=True, null=True)
     last_name = models.CharField(max_length=30)
-    company_id = models.CharField(max_length=8, validators=[RegexValidator(regex='^\d{7}$', message='company id must be 7 digits', code='invalid_company_id'),])
+    username = models.CharField(max_length=30,blank=True, null=True)
+    company_id = models.CharField(max_length=8, 
+                                  validators=[RegexValidator(
+                                            regex='^\d{7}$', message='company id must be 7 digits', 
+                                            code='invalid_company_id'),],
+                                  unique=True)
     team = models.ForeignKey(Team, null=True, blank=True)
     
     def total_assignment(self):
