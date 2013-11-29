@@ -13,7 +13,7 @@ class Employee(models.Model):
     first_name = models.CharField(max_length=30)
     middle_name = models.CharField(max_length=30, blank=True, null=True)
     last_name = models.CharField(max_length=30)
-    username = models.CharField(max_length=30,blank=True, null=True)
+    username = models.CharField(max_length=30,unique=True)
     company_id = models.CharField(max_length=8, 
                                   validators=[RegexValidator(
                                             regex='^\d{7}$', message='company id must be 7 digits', 

@@ -5,8 +5,8 @@ from goalmatrix.models import Employee, Team
 from django.template.context import RequestContext
 
 
-def showassignments(request, company_id):
-    employee = Employee.objects.get(company_id=company_id)
+def showassignments(request, username):
+    employee = Employee.objects.get(username=username)
     #print "******************     %s        ***************************" % (employee.id)
     #print "******************     %s        ***************************" % (employee.total_assignment)
     context = RequestContext(request)
