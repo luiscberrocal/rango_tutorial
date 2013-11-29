@@ -1,0 +1,19 @@
+body
+{
+background-color:white;
+}
+
+table#matrix{
+	width: 90%;
+	border: 1px solid black;
+	border-collapse:collapse;
+}
+table#matrix > tbody > tr > td{
+	border: 1px solid black;
+}
+table#matrix > thead > tr > td{
+	border: 1px solid black;
+}
+.goal {
+	vertical-align:text-top;
+}

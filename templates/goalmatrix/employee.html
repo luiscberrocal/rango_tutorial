@@ -5,22 +5,43 @@
 {% block content %}
 	<h1>{{ employee }}</h1>
 	<h2>{{ employee.company_id }}</h2>
-	<table>
+	<table id="matrix">
+		'<thead>
+			<tr>
+				<td>Objetivo</td>
+				<td>O</td>
+				<td>E</td>
+				<td>S</td>
+				<td>N</td>
+				<td>Peso</td>
+				<td>Entregables</td>
+			</tr>
+		</thead>
 	{% for assignment in employee.assignment_set.all %}
-		<tr>
-			<td>{{ assignment.goal.description}}</td>
+		<tr class="goal">
+			<td class="goal-description">{{ assignment.goal.description}}</td>
 			{% for criteria in assignment.goal.acceptancecriteria_set.all%}
-			<td>{{ criteria }}</td>
+			<td class="goal-criteria">{{ criteria }}</td>
 			{% endfor%}
-			<td>{{ assignment.weight}}</td>
-			<td>
+			<td class="goal-weight">{{ assignment.weight}}%</td>
+			<td class="goal-deliverable">
 				<ol>
 					{% for deliverable in assignment.goal.deliverable_set.all %}
 					<li>{{ deliverable.description }}</li>
 					{% endfor %}
 				</ol>
 			</td>
-		<tr>
+		</tr>
 	{% endfor %}
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>{{ employee.total_assignment }}</td>
+		<td>&nbsp;</td>
+	</tr>
+	
 	</table>
 {% endblock %}
