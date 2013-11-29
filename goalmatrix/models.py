@@ -4,7 +4,7 @@ from django.core.validators import RegexValidator
 
 class Team(models.Model):
     name = models.CharField(max_length=50)
-    short_name = models.CharField(max_length=10)
+    short_name = models.CharField(max_length=10, unique=True)
     
     def __unicode__(self):
         return u"%s, %s" % (self.short_name, self.name,)
