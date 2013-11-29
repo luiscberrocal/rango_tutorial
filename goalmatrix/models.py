@@ -68,9 +68,9 @@ class AcceptanceCriteria(models.Model):
     
     def __unicode__(self):
         if self.date_definition == 'BEFORE':
-            return u"%s para %s terminar el %d antes del  %s" % (self.goal, self.standard, self.expected_percentage, self.expected_date)
+            return u"Terminar el %.0f%% antes del %s. (%s)" % (self.expected_percentage, self.expected_date.strftime('%d-%b-%Y'), self.standard,)
         elif self.date_definition == 'AFTER':
-            return u"%s para %s terminar el %d despues del  %s" % (self.goal, self.standard, self.expected_percentage, self.expected_date)
+            return u"Terminar el %.0f%% despues del %s. (%s)" % (self.expected_percentage, self.expected_date.strftime('%d-%b-%Y'), self.standard,)
         else:
             return u"%s para %s avance %d fecha  %s" % (self.goal, self.standard, self.expected_percentage, self.expected_date)
     

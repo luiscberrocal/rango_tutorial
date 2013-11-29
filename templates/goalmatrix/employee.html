@@ -5,9 +5,22 @@
 {% block content %}
 	<h1>{{ employee }}</h1>
 	<h2>{{ employee.company_id }}</h2>
-	<ul>
+	<table>
 	{% for assignment in employee.assignment_set.all %}
-		<li>{{ assignment.goal.description}}</li>
+		<tr>
+			<td>{{ assignment.goal.description}}</td>
+			{% for criteria in assignment.goal.acceptancecriteria_set.all%}
+			<td>{{ criteria }}</td>
+			{% endfor%}
+			<td>{{ assignment.weight}}</td>
+			<td>
+				<ol>
+					{% for deliverable in assignment.goal.deliverable_set.all %}
+					<li>{{ deliverable.description }}</li>
+					{% endfor %}
+				</ol>
+			</td>
+		<tr>
 	{% endfor %}
-	</ul>
+	</table>
 {% endblock %}
