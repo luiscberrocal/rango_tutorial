@@ -21,4 +21,10 @@ def show_team_employees(request, team_short_name):
     context_dict = {'team': team}
 
     return render_to_response('goalmatrix/team.html', context_dict, context)
-    
+
+def manage_goal_matrix(request, username, action):
+    employee = Employee.objects.get(username=username)
+    context = RequestContext(request)
+    context_dict = {'employee': employee}
+
+    return render_to_response('goalmatrix/goal-matrix-form.html', context_dict, context)
