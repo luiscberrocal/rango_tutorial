@@ -7,7 +7,7 @@
 	{% for employee in team.employee_set.all %}
 		<div class="employee-info">
 			<a href="{% url 'show_assingments' employee.username %}"> {{ employee}}</a>
-			<a href="{% url 'manage_goal_matrix' employee.username  'edit' %}"> Editar Matriz}</a>
+			<a href="{% url 'manage_goal_matrix' employee.username  'edit' %}"> Editar Matriz</a>
 		</div>
 	{% endfor %}
 {% endblock %}

@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.core.validators import RegexValidator
+from django.core.validators import RegexValidator, MinValueValidator, MaxValueValidator
 
 class Team(models.Model):
     name = models.CharField(max_length=50)
@@ -34,7 +34,10 @@ class Employee(models.Model):
 class Goal(models.Model):
     position = models.IntegerField()
     description = models.CharField(max_length=120)
-    
+    grade = models.DecimalField(decimal_places=2, max_digits=5,
+                                blank=True, null=True,
+                                validators=[MinValueValidator(1),
+                                            MaxValueValidator(100)])
     def has_all_acceptance_criteria(self):
         return self.acceptancecriteria_set.count() == 4
     
