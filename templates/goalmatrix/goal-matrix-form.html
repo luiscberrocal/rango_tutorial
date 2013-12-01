@@ -5,6 +5,12 @@
 {% block content %}
 	<h1>{{ employee }}</h1>
 	<h2>{{ employee.company_id }}</h2>
+	{% if message %}
+		<div class="message">{{ message }}</div>
+	{% endif%}
+	<form action="{% url 'update_goals' %}" method="post">
+		{% csrf_token %}
+		<input type="hidden" name="username" value="{{ employee.username }}" />
 	<table id="matrix">
 		'<thead>
 			<tr>
@@ -26,7 +32,7 @@
 			<td class="goal-criteria">{{ criteria }}</td>
 			{% endfor%}
 			<td class="goal-weight">{{ assignment.weight}}%</td>
-			<td class="goal-grade"><input type="text" name="grade-{{assignment.goal.id}}"/></td>
+			<td class="goal-grade"><input type="text" name="grade-{{assignment.goal.id}}" value="{{ assignment.goal.grade}}"></td>
 			<td class="goal-deliverable">
 				<ol>
 					{% for deliverable in assignment.goal.deliverable_set.all %}
@@ -48,4 +54,6 @@
 	</tr>
 	</tbody>
 	</table>
+	 <input type="submit" value="Save">
+	</form>
 {% endblock %}
