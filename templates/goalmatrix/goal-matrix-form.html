@@ -3,6 +3,11 @@
 {% block title %}Employee Matrix{% endblock %}
 
 {% block content %}
+	 <script>
+		$( document ).ready(function() {
+			calculate_grade();
+		});
+	</script>
 	<h1>{{ employee }}</h1>
 	<h2>{{ employee.company_id }}</h2>
 	{% if message %}
@@ -21,6 +26,7 @@
 				<td>N</td>
 				<td>Peso</td>
 				<td>Nota del Objetivo</td>
+				<td>Nota</td>
 				<td>Entregables</td>
 			</tr>
 		</thead>
@@ -28,11 +34,19 @@
 	{% for assignment in employee.assignment_set.all %}
 		<tr class="goal">
 			<td class="goal-description">{{ assignment.goal.description}}</td>
+			{% if assignment.goal.acceptancecriteria_set.count == 4 %}
 			{% for criteria in assignment.goal.acceptancecriteria_set.all%}
 			<td class="goal-criteria">{{ criteria }}</td>
 			{% endfor%}
+			{% else %}
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			{% endif%}
 			<td class="goal-weight">{{ assignment.weight}}%</td>
 			<td class="goal-grade"><input type="text" name="grade-{{assignment.goal.id}}" value="{{ assignment.goal.grade}}"></td>
+			<td class="goal-emp-grade">&nbsp;</td>
 			<td class="goal-deliverable">
 				<ol>
 					{% for deliverable in assignment.goal.deliverable_set.all %}
@@ -42,7 +56,10 @@
 			</td>
 		</tr>
 	{% endfor %}
-	<tr>
+	
+	</tbody>
+	<tfoot>
+		<tr>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
 		<td>&nbsp;</td>
@@ -50,9 +67,10 @@
 		<td>&nbsp;</td>
 		<td>{{ employee.total_assignment }}%</td>
 		<td>&nbsp;</td>
+		<td id="employee-grade">&nbsp;</td>
 		<td>&nbsp;</td>
 	</tr>
-	</tbody>
+	</tfoot>
 	</table>
 	 <input type="submit" value="Save">
 	</form>

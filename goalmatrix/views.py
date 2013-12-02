@@ -4,8 +4,6 @@ from django.views.generic.base import View
 from goalmatrix.models import Employee, Team, Goal
 from django.template.context import RequestContext
 import re
-from django.http.response import HttpResponse
-from django.core.urlresolvers import reverse
 
 
 
@@ -51,9 +49,6 @@ def update_goals(request):
             c += 1
             goal.grade = goal_ids[uni_goal_id]
             goal.save()
-    
-            
-    
     #goal_ids.append(('url', request.build_absolute_uri()))
     #return HttpResponse(goal_ids)
     #return manage_goal_matrix(request, request.POST.get('username'), 'edit', message=goal_ids)
