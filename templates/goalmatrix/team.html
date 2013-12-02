@@ -6,8 +6,12 @@
 	<h1>{{ team.name }}</h1>
 	{% for employee in team.employee_set.all %}
 		<div class="employee-info">
-			<a href="{% url 'show_assingments' employee.username %}"> {{ employee}}</a>
+			<div class="col-md-2">
+				<a href="{% url 'show_assingments' employee.username %}"> {{ employee}}</a>
+			</div>
+			<div class="col-md-10">
 			<a href="{% url 'manage_goal_matrix' employee.username  'edit' %}"> Editar Matriz</a>
+			</div>
 		</div>
 	{% endfor %}
 {% endblock %}

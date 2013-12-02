@@ -8,8 +8,8 @@
 			calculate_grade();
 		});
 	</script>
-	<h1>{{ employee }}</h1>
-	<h2>{{ employee.company_id }}</h2>
+	<div>{{ employee }} {{ employee.company_id }}</div>
+	<div><a href="{% url 'show_team_employees' employee.team.short_name %}" > {{employee.team.short_name}} </a></div>
 	{% if message %}
 		<div class="message">{{ message }}</div>
 	{% endif%}
@@ -72,6 +72,6 @@
 	</tr>
 	</tfoot>
 	</table>
-	 <input type="submit" value="Save">
+	 <input type="submit" value="Save" class="btn btn-primary">
 	</form>
 {% endblock %}
