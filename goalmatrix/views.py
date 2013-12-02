@@ -56,14 +56,22 @@ def update_goals(request):
         #gg = goal.grade
         #ggn = Decimal(goal_ids[uni_goal_id])
         #raise Exception("Ee")
-        if goal_ids[uni_goal_id] != u'None':
+        if goal_ids[uni_goal_id] == u'None' or len(goal_ids[uni_goal_id]) == 0 :
+            goal_count += 1
+            goal.grade = None
+            goal.save()
+        else :
             if goal.grade != Decimal(goal_ids[uni_goal_id]):
                 goal_count += 1
                 goal.grade = goal_ids[uni_goal_id]
                 goal.save()
     for assignment in assignments:
         uni_assignment_id = unicode(assignment.id)
-        if assignment_ids[uni_assignment_id] != u'None':
+        if assignment_ids[uni_assignment_id] == u'None' or len(assignment_ids[uni_assignment_id]) == 0:
+            assignment_count += 1
+            assignment.grade = None
+            assignment.save()
+        else :
             if assignment.grade != Decimal(assignment_ids[uni_assignment_id]):
                 assignment_count += 1
                 assignment.grade = assignment_ids[uni_assignment_id]

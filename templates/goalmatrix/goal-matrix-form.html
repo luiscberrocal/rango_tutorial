@@ -20,7 +20,7 @@
 		{% csrf_token %}
 		<input type="hidden" name="username" value="{{ employee.username }}" />
 	<table id="matrix">
-		'<thead>
+		<thead>
 			<tr>
 				<td>Objetivo</td>
 				<td>O</td>
@@ -88,7 +88,7 @@
 	</tfoot>
 	</table>
 	 <!-- <input type="submit" value="Save" class="btn btn-primary"> -->
-	 <button type="button" class="btn btn-primary" type="submit" onclick="document.getElementById('frm-goal-matrix').submit();">
+	 <button type="button" class="btn btn-primary" type="submit" onclick="calculate_grade(); document.getElementById('frm-goal-matrix').submit();">
   			<span class="glyphicon glyphicon-floppy-disk"></span>Guardar
 	</button>
 

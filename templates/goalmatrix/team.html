@@ -4,6 +4,17 @@
 
 {% block content %}
 	<h1>{{ team.name }}</h1>
+	<div class="employee-info-header">
+			<div class="col-md-2">
+				Employee
+			</div>
+			<div class="col-md-1">
+				 Grade
+			</div>
+			<div class="col-md-9">
+			 Actions
+			</div>
+		</div>
 	{% for employee in team.employee_set.all %}
 		<div class="employee-info">
 			<div class="col-md-2">
