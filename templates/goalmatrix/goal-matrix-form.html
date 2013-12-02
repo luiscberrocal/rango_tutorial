@@ -6,7 +6,7 @@
 	 <script>
 		$( document ).ready(function() {
 			calculate_grade();
-			$("td.goal-grade > input").change(function(){
+			$("td.goal-grade > div.input-group > input").change(function(){
 				calculate_grade();
 			});
 		});
@@ -48,7 +48,14 @@
 			<td>&nbsp;</td>
 			{% endif%}
 			<td class="goal-weight">{{ assignment.weight}}%</td>
-			<td class="goal-grade"><input type="text" name="grade-{{assignment.goal.id}}" value="{{ assignment.goal.grade}}"></td>
+			<td class="goal-grade">
+				<!--<input type="text" name="grade-{{assignment.goal.id}}" value="{{ assignment.goal.grade}}">-->
+				<div class="input-group input-group-sm">
+				  <input type="text" class="form-control" placeholder="Goal Grade" 
+				  	name="grade-{{assignment.goal.id}}" value="{{ assignment.goal.grade}}">
+				  <span class="input-group-addon">%</span>
+				</div>
+			</td>
 			<td class="goal-emp-grade">&nbsp;</td>
 			<td class="goal-deliverable">
 				<ol>
