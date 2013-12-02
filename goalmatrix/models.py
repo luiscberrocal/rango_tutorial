@@ -47,12 +47,32 @@ class Goal(models.Model):
     def __unicode__(self):
         return u"%d, %s" % (self.position, self.description)
     
+class PersonalGoal(models.Model):
+    position = models.IntegerField()
+    employee = models.ForeignKey(Employee)
+    description = models.CharField(max_length=120)
+    weight = models.DecimalField(decimal_places=2, max_digits=5, 
+                                blank=True, null=True,
+                                validators=[MinValueValidator(1),
+                                            MaxValueValidator(100)])
+    grade = models.DecimalField(decimal_places=2, max_digits=5,
+                                blank=True, null=True,
+                                validators=[MinValueValidator(1),
+                                            MaxValueValidator(100)])
     
+   
 class Assignment(models.Model):
     position = models.IntegerField()
     employee = models.ForeignKey(Employee)
     goal = models.ForeignKey(Goal)
-    weight = models.DecimalField(decimal_places=2, max_digits=5)
+    weight = models.DecimalField(decimal_places=2, max_digits=5, 
+                                blank=True, null=True,
+                                validators=[MinValueValidator(1),
+                                            MaxValueValidator(100)])
+    grade = models.DecimalField(decimal_places=2, max_digits=5,
+                                blank=True, null=True,
+                                validators=[MinValueValidator(1),
+                                            MaxValueValidator(100)])
     class Meta:
         ordering = ['position']
         

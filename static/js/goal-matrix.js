@@ -22,6 +22,7 @@ function calculate_grade(){
 		var eg = w * gd/100;
 		employee_grade += eg;
 		$('td.goal-emp-grade', this).text(eg);
+		$('td.goal-deliverable > input', this).val(eg);
 	});
 	$('td#employee-grade').text(employee_grade);
 }

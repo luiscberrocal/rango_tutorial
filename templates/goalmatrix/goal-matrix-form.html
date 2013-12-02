@@ -56,13 +56,18 @@
 				  <span class="input-group-addon">%</span>
 				</div>
 			</td>
-			<td class="goal-emp-grade">&nbsp;</td>
+			<td class="goal-emp-grade">
+				{{ employee.assignment.grade }}
+				
+			</td>
 			<td class="goal-deliverable">
 				<ol>
 					{% for deliverable in assignment.goal.deliverable_set.all %}
 					<li>{{ deliverable.description }}</li>
 					{% endfor %}
 				</ol>
+				<input type="hidden" name="assignment-grade-{{assignment.id}}"
+					 value="{{ employee.assignment.grade }}" />
 			</td>
 		</tr>
 	{% endfor %}

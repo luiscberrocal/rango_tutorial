@@ -1,6 +1,6 @@
 from django.contrib import admin
 from goalmatrix.models import Employee, Goal, Assignment, AcceptanceCriteria, Deliverable, Team,\
-    StandardClassification
+    StandardClassification, PersonalGoal
 
 class AssignmentAdmin(admin.ModelAdmin):
     list_display = ["employee", "position", "goal", "weight"]
@@ -28,4 +28,5 @@ admin.site.register(AcceptanceCriteria)
 admin.site.register(Deliverable)
 admin.site.register(Team)
 admin.site.register(StandardClassification)
+admin.site.register(PersonalGoal)
 
