@@ -6,6 +6,9 @@
 	 <script>
 		$( document ).ready(function() {
 			calculate_grade();
+			$("td.goal-grade > input").change(function(){
+				calculate_grade();
+			});
 		});
 	</script>
 	<div>{{ employee }} {{ employee.company_id }}</div>
@@ -13,7 +16,7 @@
 	{% if message %}
 		<div class="message">{{ message }}</div>
 	{% endif%}
-	<form action="{% url 'manage_goal_matrix' employee.username  'update_goals'  %}" method="post">
+	<form action="{% url 'manage_goal_matrix' employee.username  'update_goals'  %}" method="post" id="frm-goal-matrix">
 		{% csrf_token %}
 		<input type="hidden" name="username" value="{{ employee.username }}" />
 	<table id="matrix">
@@ -72,6 +75,10 @@
 	</tr>
 	</tfoot>
 	</table>
-	 <input type="submit" value="Save" class="btn btn-primary">
+	 <!-- <input type="submit" value="Save" class="btn btn-primary"> -->
+	 <button type="button" class="btn btn-primary" type="submit" onclick="document.getElementById('frm-goal-matrix').submit();">
+  			<span class="glyphicon glyphicon-floppy-disk"></span>Guardar
+	</button>
+
 	</form>
 {% endblock %}
