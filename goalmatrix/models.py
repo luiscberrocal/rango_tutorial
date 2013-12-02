@@ -27,6 +27,13 @@ class Employee(models.Model):
             ta += assign.weight
             #print "ddddddddddddddddd %d" % (ta)
         return ta
+    
+    def assignment_grade(self):
+        grade = 0
+        for assign in self.assignment_set.all():
+            grade += assign.grade
+            #print "ddddddddddddddddd %d" % (ta)
+        return grade
 
     def __unicode__(self):
         return u"%s, %s" % (self.last_name, self.first_name,)

@@ -56,16 +56,18 @@ def update_goals(request):
         #gg = goal.grade
         #ggn = Decimal(goal_ids[uni_goal_id])
         #raise Exception("Ee")
-        if goal.grade != Decimal(goal_ids[uni_goal_id]):
-            goal_count += 1
-            goal.grade = goal_ids[uni_goal_id]
-            goal.save()
+        if goal_ids[uni_goal_id] != u'None':
+            if goal.grade != Decimal(goal_ids[uni_goal_id]):
+                goal_count += 1
+                goal.grade = goal_ids[uni_goal_id]
+                goal.save()
     for assignment in assignments:
         uni_assignment_id = unicode(assignment.id)
-        if assignment.grade != Decimal(assignment_ids[uni_assignment_id]):
-            assignment_count += 1
-            assignment.grade = assignment_ids[uni_assignment_id]
-            assignment.save()
+        if assignment_ids[uni_assignment_id] != u'None':
+            if assignment.grade != Decimal(assignment_ids[uni_assignment_id]):
+                assignment_count += 1
+                assignment.grade = assignment_ids[uni_assignment_id]
+                assignment.save()
             
     #goal_ids.append(('url', request.build_absolute_uri()))
     #return HttpResponse(goal_ids)

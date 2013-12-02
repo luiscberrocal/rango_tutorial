@@ -9,7 +9,10 @@
 			<div class="col-md-2">
 				<a href="{% url 'show_assingments' employee.username %}"> {{ employee}}</a>
 			</div>
-			<div class="col-md-10">
+			<div class="col-md-1">
+				{{ employee.assignment_grade}}%
+			</div>
+			<div class="col-md-9">
 			<a href="{% url 'manage_goal_matrix' employee.username  'edit' %}"> Editar Matriz</a>
 			</div>
 		</div>
