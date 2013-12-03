@@ -1,0 +1,43 @@
+{% extends "goalmatrix/base.html" %}
+{% load static %} 
+{% block title %}Goals{% endblock %}
+
+{% block content %}
+	<h1>Goals</h1>
+	<table id="goals" class="table table-bordered">
+		<thead>
+			<tr>
+				<td>Objetivo</td>
+				<td>O</td>
+				<td>E</td>
+				<td>S</td>
+				<td>N</td>
+				<td>Entregables</td>
+			</tr>
+		</thead>
+	{% for goal in goals %}
+		<tr class="goal">
+			<td class="goal-description">{{ goal.description}}</td>
+			{% for criteria in goal.acceptancecriteria_set.all%}
+			<td class="goal-criteria">{{ criteria }}</td>
+			{% endfor%}
+			<td class="goal-deliverable">
+				<ol>
+					{% for deliverable in goal.deliverable_set.all %}
+					<li>{{ deliverable.description }}</li>
+					{% endfor %}
+				</ol>
+			</td>
+		</tr>
+	{% endfor %}
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	
+	</table>
+{% endblock %}

@@ -34,7 +34,12 @@ def manage_goal_matrix(request, username, action):
         context_dict.update({'message' : message})
         
     return render_to_response('goalmatrix/goal-matrix-form.html', context_dict, context)
-
+def show_goals(request):
+    goals = Goal.objects.all()
+    context = RequestContext(request)
+    context_dict = {'goals': goals}
+    return render_to_response('goalmatrix/goals.html', context_dict, context)
+    
 def update_goals(request):
     pattern = re.compile('grade-(\d*)$', re.UNICODE)
     ag_pattern = re.compile('assignment-grade-(\d*)$', re.UNICODE)
