@@ -1,12 +1,16 @@
-from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
-from django.views.generic.base import View
 from goalmatrix.models import Employee, Team, Goal, Assignment
 from django.template.context import RequestContext
 import re
 from decimal import Decimal
+from django.utils.translation import ugettext as _
+from django.http.response import HttpResponse
 
 
+def index(request):
+    # Translators: This message appears on the home page only
+    output = _("Welcome to Goal Matrix")
+    return HttpResponse(output)
 
 def showassignments(request, username):
     employee = Employee.objects.get(username=username)
