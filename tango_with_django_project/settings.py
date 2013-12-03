@@ -45,6 +45,12 @@ SITE_ID = 1
 # to load the internationalization machinery.
 USE_I18N = True
 
+ugettext = lambda s: s
+
+LANGUAGES = (
+        ('en', u'English'),
+        ('es', u'Espanol'),
+)
 # If you set this to False, Django will not format dates, numbers and
 # calendars according to the current locale.
 USE_L10N = True
@@ -100,8 +106,9 @@ TEMPLATE_LOADERS = (
 )
 
 MIDDLEWARE_CLASSES = (
-    'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',

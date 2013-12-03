@@ -9,7 +9,7 @@ from django.http.response import HttpResponse
 
 def index(request):
     # Translators: This message appears on the home page only
-    output = _("Welcome to Goal Matrix")
+    output = _("No month specified")
     return HttpResponse(output)
 
 def showassignments(request, username):

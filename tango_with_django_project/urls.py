@@ -2,6 +2,7 @@ from django.conf.urls import patterns, include, url
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
+from django.conf.urls.i18n import i18n_patterns
 admin.autodiscover()
 from rango import views
 
@@ -19,6 +20,7 @@ urlpatterns = patterns('',
 	url(r'^rango/', include('rango.urls')),
     url(r'^goalmatrix/', include('goalmatrix.urls')),
 )
+urlpatterns += i18n_patterns('', url(r'^index/$', 'goalmatrix.views.index' , name='index'))
 # At the top of your urls.py file, add the following line:
 from django.conf import settings
 
