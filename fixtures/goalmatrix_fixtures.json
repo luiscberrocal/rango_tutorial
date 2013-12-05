@@ -1,0 +1,581 @@
+[
+{
+    "pk": 1, 
+    "model": "goalmatrix.team", 
+    "fields": {
+        "name": "Rinoceronte", 
+        "short_name": "RINO"
+    }
+},
+{
+    "pk": 1, 
+    "model": "goalmatrix.employee", 
+    "fields": {
+        "username": "jdominguez", 
+        "first_name": "Joe", 
+        "last_name": "Dominguez", 
+        "middle_name": "S.", 
+        "company_id": "1795341", 
+        "team": 1
+    }
+},
+{
+    "pk": 2, 
+    "model": "goalmatrix.employee", 
+    "fields": {
+        "username": "gdays", 
+        "first_name": "George", 
+        "last_name": "Days", 
+        "middle_name": "A.", 
+        "company_id": "7895487", 
+        "team": 1
+    }
+},
+{
+    "pk": 3, 
+    "model": "goalmatrix.employee", 
+    "fields": {
+        "username": "jdaniels", 
+        "first_name": "Jules", 
+        "last_name": "Daniels", 
+        "middle_name": "", 
+        "company_id": "1721344", 
+        "team": 1
+    }
+},
+{
+    "pk": 4, 
+    "model": "goalmatrix.employee", 
+    "fields": {
+        "username": "cmartinez", 
+        "first_name": "Carmen", 
+        "last_name": "Martinez", 
+        "middle_name": "", 
+        "company_id": "1786356", 
+        "team": 1
+    }
+},
+{
+    "pk": 1, 
+    "model": "goalmatrix.goal", 
+    "fields": {
+        "grade": "95", 
+        "position": 1, 
+        "description": "CA-Activaci\u00f3n de nuevas esclusas"
+    }
+},
+{
+    "pk": 2, 
+    "model": "goalmatrix.goal", 
+    "fields": {
+        "grade": null, 
+        "position": 2, 
+        "description": "Ayuda a la navegaci\u00f3n de pr\u00e1cticos a trav\u00e9s de la red celular (Fase 2)"
+    }
+},
+{
+    "pk": 3, 
+    "model": "goalmatrix.goal", 
+    "fields": {
+        "grade": "69", 
+        "position": 3, 
+        "description": "Implementaci\u00f3n de la Calculadora de Tiempos en el Horario de Tr\u00e1nsito"
+    }
+},
+{
+    "pk": 4, 
+    "model": "goalmatrix.goal", 
+    "fields": {
+        "grade": null, 
+        "position": 4, 
+        "description": "Mapa AIS Tetra"
+    }
+},
+{
+    "pk": 5, 
+    "model": "goalmatrix.goal", 
+    "fields": {
+        "grade": "89", 
+        "position": 5, 
+        "description": "Vessel Schedule Reprogramaci\u00f3n"
+    }
+},
+{
+    "pk": 6, 
+    "model": "goalmatrix.goal", 
+    "fields": {
+        "grade": null, 
+        "position": 6, 
+        "description": "MDCA"
+    }
+},
+{
+    "pk": 7, 
+    "model": "goalmatrix.goal", 
+    "fields": {
+        "grade": null, 
+        "position": 7, 
+        "description": "Adecuaciones para Remolcadores"
+    }
+},
+{
+    "pk": 8, 
+    "model": "goalmatrix.goal", 
+    "fields": {
+        "grade": null, 
+        "position": 8, 
+        "description": "Adecuaciones a Pilot Unit"
+    }
+},
+{
+    "pk": 9, 
+    "model": "goalmatrix.goal", 
+    "fields": {
+        "grade": null, 
+        "position": 9, 
+        "description": "Adecuacionesa a Arqueo"
+    }
+},
+{
+    "pk": 1, 
+    "model": "goalmatrix.assignment", 
+    "fields": {
+        "employee": 1, 
+        "position": 1, 
+        "goal": 1, 
+        "weight": "25", 
+        "grade": "23.75"
+    }
+},
+{
+    "pk": 2, 
+    "model": "goalmatrix.assignment", 
+    "fields": {
+        "employee": 1, 
+        "position": 2, 
+        "goal": 2, 
+        "weight": "25", 
+        "grade": "0"
+    }
+},
+{
+    "pk": 3, 
+    "model": "goalmatrix.assignment", 
+    "fields": {
+        "employee": 1, 
+        "position": 3, 
+        "goal": 5, 
+        "weight": "25", 
+        "grade": "22.25"
+    }
+},
+{
+    "pk": 4, 
+    "model": "goalmatrix.assignment", 
+    "fields": {
+        "employee": 1, 
+        "position": 4, 
+        "goal": 3, 
+        "weight": "25", 
+        "grade": "17.25"
+    }
+},
+{
+    "pk": 5, 
+    "model": "goalmatrix.assignment", 
+    "fields": {
+        "employee": 2, 
+        "position": 1, 
+        "goal": 1, 
+        "weight": "30", 
+        "grade": "28.5"
+    }
+},
+{
+    "pk": 6, 
+    "model": "goalmatrix.assignment", 
+    "fields": {
+        "employee": 2, 
+        "position": 2, 
+        "goal": 5, 
+        "weight": "5", 
+        "grade": "4.45"
+    }
+},
+{
+    "pk": 7, 
+    "model": "goalmatrix.assignment", 
+    "fields": {
+        "employee": 2, 
+        "position": 3, 
+        "goal": 6, 
+        "weight": "15", 
+        "grade": "0"
+    }
+},
+{
+    "pk": 8, 
+    "model": "goalmatrix.assignment", 
+    "fields": {
+        "employee": 2, 
+        "position": 4, 
+        "goal": 7, 
+        "weight": "25", 
+        "grade": "0"
+    }
+},
+{
+    "pk": 9, 
+    "model": "goalmatrix.assignment", 
+    "fields": {
+        "employee": 2, 
+        "position": 5, 
+        "goal": 2, 
+        "weight": "25", 
+        "grade": "0"
+    }
+},
+{
+    "pk": "E", 
+    "model": "goalmatrix.standardclassification", 
+    "fields": {
+        "grade": "89"
+    }
+},
+{
+    "pk": "N", 
+    "model": "goalmatrix.standardclassification", 
+    "fields": {
+        "grade": "70"
+    }
+},
+{
+    "pk": "O", 
+    "model": "goalmatrix.standardclassification", 
+    "fields": {
+        "grade": "100"
+    }
+},
+{
+    "pk": "S", 
+    "model": "goalmatrix.standardclassification", 
+    "fields": {
+        "grade": "80"
+    }
+},
+{
+    "pk": 1, 
+    "model": "goalmatrix.acceptancecriteria", 
+    "fields": {
+        "date_definition": "BEFORE", 
+        "description": "", 
+        "expected_date": "2014-01-17", 
+        "standard": "O", 
+        "expected_percentage": 100, 
+        "goal": 1
+    }
+},
+{
+    "pk": 2, 
+    "model": "goalmatrix.acceptancecriteria", 
+    "fields": {
+        "date_definition": "BEFORE", 
+        "description": "", 
+        "expected_date": "2014-01-31", 
+        "standard": "E", 
+        "expected_percentage": 100, 
+        "goal": 1
+    }
+},
+{
+    "pk": 3, 
+    "model": "goalmatrix.acceptancecriteria", 
+    "fields": {
+        "date_definition": "BEFORE", 
+        "description": "", 
+        "expected_date": "2014-02-28", 
+        "standard": "S", 
+        "expected_percentage": 100, 
+        "goal": 1
+    }
+},
+{
+    "pk": 4, 
+    "model": "goalmatrix.acceptancecriteria", 
+    "fields": {
+        "date_definition": "AFTER", 
+        "description": "", 
+        "expected_date": "2014-02-28", 
+        "standard": "N", 
+        "expected_percentage": 100, 
+        "goal": 1
+    }
+},
+{
+    "pk": 5, 
+    "model": "goalmatrix.acceptancecriteria", 
+    "fields": {
+        "date_definition": "BEFORE", 
+        "description": "", 
+        "expected_date": "2014-02-28", 
+        "standard": "O", 
+        "expected_percentage": 100, 
+        "goal": 2
+    }
+},
+{
+    "pk": 6, 
+    "model": "goalmatrix.acceptancecriteria", 
+    "fields": {
+        "date_definition": "BEFORE", 
+        "description": "", 
+        "expected_date": "2014-03-14", 
+        "standard": "E", 
+        "expected_percentage": 100, 
+        "goal": 2
+    }
+},
+{
+    "pk": 7, 
+    "model": "goalmatrix.acceptancecriteria", 
+    "fields": {
+        "date_definition": "BEFORE", 
+        "description": "", 
+        "expected_date": "2014-03-31", 
+        "standard": "S", 
+        "expected_percentage": 100, 
+        "goal": 2
+    }
+},
+{
+    "pk": 8, 
+    "model": "goalmatrix.acceptancecriteria", 
+    "fields": {
+        "date_definition": "AFTER", 
+        "description": "", 
+        "expected_date": "2014-03-31", 
+        "standard": "N", 
+        "expected_percentage": 100, 
+        "goal": 2
+    }
+},
+{
+    "pk": 9, 
+    "model": "goalmatrix.acceptancecriteria", 
+    "fields": {
+        "date_definition": "BEFORE", 
+        "description": "", 
+        "expected_date": "2014-01-17", 
+        "standard": "O", 
+        "expected_percentage": 100, 
+        "goal": 3
+    }
+},
+{
+    "pk": 10, 
+    "model": "goalmatrix.acceptancecriteria", 
+    "fields": {
+        "date_definition": "BEFORE", 
+        "description": "", 
+        "expected_date": "2014-01-31", 
+        "standard": "E", 
+        "expected_percentage": 100, 
+        "goal": 3
+    }
+},
+{
+    "pk": 11, 
+    "model": "goalmatrix.acceptancecriteria", 
+    "fields": {
+        "date_definition": "BEFORE", 
+        "description": "", 
+        "expected_date": "2014-02-28", 
+        "standard": "S", 
+        "expected_percentage": 100, 
+        "goal": 3
+    }
+},
+{
+    "pk": 12, 
+    "model": "goalmatrix.acceptancecriteria", 
+    "fields": {
+        "date_definition": "AFTER", 
+        "description": "", 
+        "expected_date": "2014-02-28", 
+        "standard": "N", 
+        "expected_percentage": 100, 
+        "goal": 3
+    }
+},
+{
+    "pk": 13, 
+    "model": "goalmatrix.acceptancecriteria", 
+    "fields": {
+        "date_definition": "BEFORE", 
+        "description": "", 
+        "expected_date": "2014-02-28", 
+        "standard": "O", 
+        "expected_percentage": 100, 
+        "goal": 4
+    }
+},
+{
+    "pk": 14, 
+    "model": "goalmatrix.acceptancecriteria", 
+    "fields": {
+        "date_definition": "BEFORE", 
+        "description": "", 
+        "expected_date": "2014-03-28", 
+        "standard": "E", 
+        "expected_percentage": 100, 
+        "goal": 4
+    }
+},
+{
+    "pk": 15, 
+    "model": "goalmatrix.acceptancecriteria", 
+    "fields": {
+        "date_definition": "BEFORE", 
+        "description": "", 
+        "expected_date": "2014-04-11", 
+        "standard": "S", 
+        "expected_percentage": 100, 
+        "goal": 4
+    }
+},
+{
+    "pk": 16, 
+    "model": "goalmatrix.acceptancecriteria", 
+    "fields": {
+        "date_definition": "AFTER", 
+        "description": "", 
+        "expected_date": "2014-04-11", 
+        "standard": "N", 
+        "expected_percentage": 100, 
+        "goal": 4
+    }
+},
+{
+    "pk": 17, 
+    "model": "goalmatrix.acceptancecriteria", 
+    "fields": {
+        "date_definition": "BEFORE", 
+        "description": "", 
+        "expected_date": "2014-06-30", 
+        "standard": "O", 
+        "expected_percentage": 100, 
+        "goal": 6
+    }
+},
+{
+    "pk": 18, 
+    "model": "goalmatrix.acceptancecriteria", 
+    "fields": {
+        "date_definition": "BEFORE", 
+        "description": "", 
+        "expected_date": "2014-07-25", 
+        "standard": "E", 
+        "expected_percentage": 100, 
+        "goal": 6
+    }
+},
+{
+    "pk": 19, 
+    "model": "goalmatrix.acceptancecriteria", 
+    "fields": {
+        "date_definition": "BEFORE", 
+        "description": "", 
+        "expected_date": "2014-08-01", 
+        "standard": "S", 
+        "expected_percentage": 100, 
+        "goal": 6
+    }
+},
+{
+    "pk": 20, 
+    "model": "goalmatrix.acceptancecriteria", 
+    "fields": {
+        "date_definition": "AFTER", 
+        "description": "", 
+        "expected_date": "2014-08-01", 
+        "standard": "N", 
+        "expected_percentage": 100, 
+        "goal": 6
+    }
+},
+{
+    "pk": 21, 
+    "model": "goalmatrix.acceptancecriteria", 
+    "fields": {
+        "date_definition": "BEFORE", 
+        "description": "", 
+        "expected_date": "2013-12-31", 
+        "standard": "O", 
+        "expected_percentage": 100, 
+        "goal": 5
+    }
+},
+{
+    "pk": 22, 
+    "model": "goalmatrix.acceptancecriteria", 
+    "fields": {
+        "date_definition": "BEFORE", 
+        "description": "", 
+        "expected_date": "2014-01-31", 
+        "standard": "E", 
+        "expected_percentage": 100, 
+        "goal": 5
+    }
+},
+{
+    "pk": 23, 
+    "model": "goalmatrix.acceptancecriteria", 
+    "fields": {
+        "date_definition": "BEFORE", 
+        "description": "", 
+        "expected_date": "2014-02-14", 
+        "standard": "S", 
+        "expected_percentage": 100, 
+        "goal": 5
+    }
+},
+{
+    "pk": 24, 
+    "model": "goalmatrix.acceptancecriteria", 
+    "fields": {
+        "date_definition": "AFTER", 
+        "description": "", 
+        "expected_date": "2014-02-14", 
+        "standard": "N", 
+        "expected_percentage": 100, 
+        "goal": 5
+    }
+},
+{
+    "pk": 1, 
+    "model": "goalmatrix.deliverable", 
+    "fields": {
+        "position": 1, 
+        "goal": 1, 
+        "description": "28 Reportes modificados"
+    }
+},
+{
+    "pk": 2, 
+    "model": "goalmatrix.deliverable", 
+    "fields": {
+        "position": 2, 
+        "goal": 1, 
+        "description": "10 pantallas modificadas"
+    }
+},
+{
+    "pk": 3, 
+    "model": "goalmatrix.deliverable", 
+    "fields": {
+        "position": 3, 
+        "goal": 1, 
+        "description": "Nuevas localizaciones en el Canal"
+    }
+}
+]
