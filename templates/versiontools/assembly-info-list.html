@@ -1,0 +1,14 @@
+{% extends "versiontools/base.html" %}
+{% load static %} 
+{% block title %}Assembly Info List{% endblock %}
+
+{% block content %}
+	{% for ai in assembly_info_list %}
+		<div class="assembly-info">
+			<div class="col-md-12">
+				{{ai}}
+			</div>
+		</div>
+	{% endfor %}
+{% endblock %}
+

@@ -140,6 +140,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'debug_toolbar',
     'goalmatrix',
+    'versiontools',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )

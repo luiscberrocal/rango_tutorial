@@ -19,6 +19,7 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 	url(r'^rango/', include('rango.urls')),
     url(r'^goalmatrix/', include('goalmatrix.urls')),
+    url(r'^versiontools/', include('versiontools.urls')),
 )
 urlpatterns += i18n_patterns('', url(r'^index/$', 'goalmatrix.views.index' , name='index'))
 # At the top of your urls.py file, add the following line:
