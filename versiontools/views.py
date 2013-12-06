@@ -10,7 +10,9 @@ def show_assemblyinfo(request):
     
     context = RequestContext(request)
     
-    context_dict = {'assembly_info_list': af.assembly_info_list}
+    context_dict = {'assembly_info_list': af.assembly_info_list,
+                    'scanned_directory' : directory_to_scan,
+                    'dlen'              : 30}
 
     return render_to_response('versiontools/assembly-info-list.html', context_dict, context)
     

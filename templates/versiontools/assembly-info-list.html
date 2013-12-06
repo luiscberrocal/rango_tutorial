@@ -3,10 +3,11 @@
 {% block title %}Assembly Info List{% endblock %}
 
 {% block content %}
+	<h2> {{ scanned_directory }} </h2>
 	{% for ai in assembly_info_list %}
 		<div class="assembly-info">
 			<div class="col-md-12">
-				{{ai}}
+				{{ ai }}
 			</div>
 		</div>
 	{% endfor %}
