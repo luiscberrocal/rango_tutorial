@@ -16,7 +16,7 @@ DATABASE_PATH = os.path.join(BASE_DIR, 'rango.db')
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': DATABASE_PATH,                      # Or path to database file if using sqlite3.
+        'NAME': r'C:\Users\lberrocal\Dropbox\tino-ns\goalmatrix_tino.db',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': '',
         'PASSWORD': '',

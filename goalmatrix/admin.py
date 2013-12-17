@@ -15,6 +15,7 @@ class AcceptanceCriteriaInLine(admin.TabularInline):
 class DeliverableInLine(admin.TabularInline):
     model = Deliverable
 class EmployeeAdmin(admin.ModelAdmin):
+    list_display = ["__unicode__", "company_id", "username", 'team']
     inlines = [AssignmentInLine]
     
 class GoalAdmin(admin.ModelAdmin):
