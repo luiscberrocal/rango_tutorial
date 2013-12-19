@@ -13,6 +13,7 @@
 				<td>S</td>
 				<td>N</td>
 				<td>Entregables</td>
+				<td>Asignaciones</td>
 			</tr>
 		</thead>
 	{% for goal in goals %}
@@ -25,6 +26,13 @@
 				<ol>
 					{% for deliverable in goal.deliverable_set.all %}
 					<li>{{ deliverable.description }}</li>
+					{% endfor %}
+				</ol>
+			</td>
+			<td>
+				<ol>
+					{% for assign in goal.assignment_set.all %}
+					<li>{{ assign.employee }} ({{ assign.weight}}%)</li>
 					{% endfor %}
 				</ol>
 			</td>
