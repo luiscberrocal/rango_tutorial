@@ -3,18 +3,23 @@
 {% block title %}Employee Matrix{% endblock %}
 
 {% block content %}
-	<h1>{{ employee }}</h1>
-	<h2>{{ employee.company_id }}</h2>
+	<div class='acp'>Autoridad del Canal de Panamá</div>
+	<div class='acp'>Matriz de Cumplimiento de Objetivos de Evaluación de Desempeño AF2014</div>
+	<div class='acp'>Período: 01-oct-2013 al 30-sept-2014</div>
+	<div class='employee-name'>{{ employee }} IP: {{ employee.company_id }}</div>
 	<table id="matrix">
 		<thead>
 			<tr>
-				<td>Objetivo</td>
-				<td>O</td>
-				<td>E</td>
-				<td>S</td>
-				<td>N</td>
-				<td>Peso</td>
-				<td>Entregables</td>
+				<td rowspan='2'>Objetivo</td>
+				<td colspan='4'>Estándares de Desempeño</td>
+				<td rowspan='2'>Peso</td>
+				<td rowspan='2'>Entregables</td>
+			</tr>
+			<tr>
+				<td>Sobresaliente (O)</td>
+				<td>Superior (E)</td>
+				<td>Satisfactorio (S)</td>
+				<td>Necesita mejorar (N)</td>				
 			</tr>
 		</thead>
 	{% for assignment in employee.assignment_set.all %}
@@ -42,6 +47,11 @@
 		<td>{{ employee.total_assignment }}%</td>
 		<td>&nbsp;</td>
 	</tr>
-	
+	<tr>
+		<td>Firma</td>
+		<td colspan='3'>&nbsp;</td>		
+		<td>Fecha</td>
+		<tdcolspan='2'>&nbsp;</td>
+	</tr>
 	</table>
 {% endblock %}

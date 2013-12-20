@@ -13,7 +13,14 @@ table#matrix > tbody > tr > td{
 }
 table#matrix > thead > tr > td{
 	border: 1px solid black;
+	text-align: center;
 }
 .goal {
 	vertical-align:text-top;
+}
+.goal-deliverable{
+	font-size:80%
+}
+.acp{
+	text-align: center;
 }
