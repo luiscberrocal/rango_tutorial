@@ -10,8 +10,7 @@ Development
 Windows
 +++++++
 
-HTTP_PROXY http://127.0.0.1:3128
-
+HTTP_PROXY http://10.106.30.50:3128
 Project: C:\Users\lberrocal\workspace\rango_tutorial
 Virualenv: C:\python_environments\django_16_quizmaker
 
